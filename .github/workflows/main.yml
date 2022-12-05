@@ -67,7 +67,3 @@ jobs:
         docker build . --file Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.getversion.outputs.version }}-${GITHUB_RUN_NUMBER}-${{env.COMMIT_ID}}-${{env.BRANCH_NAME}}
         
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.getversion.outputs.version }}-${GITHUB_RUN_NUMBER}-${{env.COMMIT_ID}}-${{env.BRANCH_NAME}}  
-
-
-
-######
